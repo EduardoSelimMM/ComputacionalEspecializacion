@@ -37,5 +37,64 @@ Uno de los objetivos de este proyecto ...
 
 Uno de los objetivos de este proyecto es revisar ...
 
+\section{Métricas}
+
+Dentro del análisis de series de tiempo, el promedio móvil nos permite mapear o rastrear las fluctuaciones teniendo en cuenta las tendencias más altas dentro de los datos
+
+Un promedio móvil es una técnica utilizada para suavizar los datos de series de tiempo para reducir el "ruido" en los datos e identificar más fácilmente patrones y tendencias.
+
+En Moving Average, se calcula el promedio de diferentes partes (secciones) del conjunto de datos. Es decir, calcula el promedio general de los diversos subconjuntos dentro del conjunto de datos completo. Por esto, podemos entender la tendencia en los datos con respecto a diferentes escenarios o periodos temporales dentro del mismo conjunto de valores de datos que se aleatorizan por completo.
+
+Hay varios tipos de medias móviles, tales como:
+
+Promedio móvil simple
+Promedio móvil ponderado
+Media móvil exponencial
+Promedio Móvil Simple
+El promedio movil también es conocido como "rolling mean" y se calcula promediando los datos de la serie temporal dentro de k períodos de tiempo. Los promedios móviles se usan ampliamente en finanzas para determinar tendencias en el mercado y en ingeniería ambiental para evaluar estándares de calidad ambiental, como la concentración de contaminantes.
+
+El pronóstico se obtiene calculando el promedio de los datos históricos considerados, es decir, pronostica con base al promedio de los períodos que se hayan considerado que se denominan orden del pronóstico. Dónde:
+Ft=Ct+Ct−1+...Ct−9n 
+𝐹𝑡 = Pronóstico para el siguiente periodo.
+
+𝐷𝑡−𝑖 = Precios de cierre reales en los periodos pasados, (para i = 1… 10)
+
+n = Numero de periodos para medir (en este caso utilizaremos n=10)
+
+Promedio Móvil Ponderado
+En el método de promedio móvil ponderado, hacemos uso de pesos para tener información sobre las fluctuaciones en los valores de los datos.
+
+Aquí, se otorga un peso (valor) mayor a los datos que sean más recientes en la serie y un valor más pequeño a los datos que son menos frecuente o son más antigüos en los valores de la serie.
+
+Para calcular el promedio móvil ponderado (WMA), multiplicamos cada punto de datos con sus pesos correspondientes y finalmente calculamos la suma de los resultados.
+
+Cuando se presenta una tendencia o un patrón localizable, pueden utilizarse ponderaciones para dar más énfasis a los valores recientes. Esta práctica permite que las técnicas de pronóstico respondan más rápido a los cambios, puesto que puede darse mayor peso a los periodos más recientes. La elección de las ponderaciones es un tanto arbitraria porque no existe una fórmula establecida para determinarlas.
+
+El promedio móvil ponderado utilizado en este caso se expresa como:
+
+Ft=(10)Ct+(9)Ct−1+...Ct−9n+(n−1)+..+1 
+
+𝐹𝑡 = Pronóstico para el siguiente periodo.
+
+𝐷𝑡−𝑖 = Precios de cierre reales en los periodos pasados, (para i = 1… 10)
+
+n = Numero de periodos para medir (en este caso utilizaremos n=10)
+
+Stochastic K%
+El oscilador estocástico es un indicador de momentum que se utiliza para indicar cambios de tendencia en el mercado de valores. Describe el precio actual en relación con los precios máximos y mínimos durante una serie de períodos de trading anteriores.
+
+El oscilador estocástico fue desarrollado por el Dr. George Lane en la década de 1950 y se ha utilizado como indicador técnico para el comercio de acciones desde entonces. Su popularidad es atribuible a su relativa facilidad de interpretación y trayectoria de éxito. Este indicador a menudo se traza debajo de los gráficos de precios para ayudar a proporcionar señales visuales claras para las acciones comerciales.
+
+El oscilador estocástico tiene 2 señales principales que funcionan para construir una señal comercial. Estas señales, denominadas señales rápidas y lentas.
+
+El oscilador estocástico es un indicador de momentum que tiene en cuenta n valores previos durante una serie de tiempo. Esa es la definición técnica; en un lenguaje más sencillo, el oscilador estocástico utiliza el precio de los días de trading anteriores para describir qué tan cerca está el precio actual del rango (alto-bajo) durante esos días.
+
+El oscilador estocástico en este caso se expresa como:
+
+Ft=Ct−LLt−(n−1)HHt−(n−1)−LLt−(n−1)∗100 
+
+Donde: LL y HH son el mínimo más bajo y el máximo más alto en los últimos t días, respectivamente.
+
+
 
 \end{document}
