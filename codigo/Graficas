@@ -1,0 +1,18 @@
+import seaborn as sb
+plt.figure(figsize=(8,8))
+
+sb.heatmap(df_ml.corr(method="pearson"), annot=True, cmap="coolwarm")
+plt.show()
+
+import matplotlib.pyplot as plt
+df_ml.hist(figsize=(14,14))
+plt.show()
+sns.boxplot(x='etiqueta', y='Prom_Movil', data=df_ml);
+df_ml["Prom_Movil"].describe()
+sns.boxplot(x='etiqueta', y='uma10', data=df_ml);
+sns.boxplot(x='etiqueta', y='Momentum', data=df_ml);
+sns.boxplot(x='etiqueta', y='AD_oscilator', data=df_ml);
+sns.boxplot(x='etiqueta', y='LarryWilliams', data=df_ml);
+sns.boxplot(x='etiqueta', y='StochasticK', data=df_ml);
+frecuencia = df_ml['etiqueta_binaria'].value_counts()
+frecuencia.plot(kind = 'pie');
